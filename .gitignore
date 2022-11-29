@@ -36,3 +36,10 @@ yarn-error.log*
 next-env.d.ts
 
 .env
+/.idea/.gitignore
+/.idea/aws.xml
+/.idea/gpt3-AI-therapist.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
