@@ -17,6 +17,9 @@ const Home = () => {
                         <h2>insert your subtitle here</h2>
                     </div>
                 </div>
+                <div className="prompt-container">
+                    <textarea placeholder="What's on your mind?" className="prompt-box" />
+                </div>
             </div>
             <div className="badge-container grow">
                 <a
