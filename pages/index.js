@@ -43,7 +43,7 @@ const Home = () => {
                         <h1>AI-powered virtual therapist</h1>
                     </div>
                     <div className="header-subtitle">
-                        <h2>Write a short sentence about how you're feeling</h2>
+                        <h2>Meet Athena the AI, tell her how you're feeling</h2>
                     </div>
                 </div>
                 <div className="prompt-container">
