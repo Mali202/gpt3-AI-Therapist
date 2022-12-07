@@ -6,6 +6,7 @@ import { useState } from 'react';
 const Home = () => {
     const [userInput, setUserInput] = useState('');
     const [apiOutput, setApiOutput] = useState('')
+    const [conversation, setConversation] = useState('')
     const [isGenerating, setIsGenerating] = useState(false)
 
     const callGenerateEndpoint = async () => {
@@ -17,15 +18,19 @@ const Home = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ userInput }),
+            body: JSON.stringify({ "userInput": `${conversation}${userInput}` }),
         });
 
         const data = await response.json();
         const { output } = data;
         console.log("OpenAI replied...", output.text)
 
+        setConversation((prevState) => {
+            return `${prevState}${userInput}\nAthena: ${output.text}\nMe: `
+        });
         setApiOutput(`${output.text}`);
         setIsGenerating(false);
+        setUserInput("");
     }
 
     const onUserChangedText = (event) => {
