@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
+import githublogo from '../assets/github-logo.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -82,13 +82,13 @@ const Home = () => {
             </div>
             <div className="badge-container grow">
                 <a
-                    href="https://buildspace.so/builds/ai-writer"
+                    href="https://github.com/Mali202"
                     target="_blank"
                     rel="noreferrer"
                 >
                     <div className="badge">
-                        <Image src={buildspaceLogo} alt="buildspace logo"/>
-                        <p>build with buildspace</p>
+                        <Image src={githublogo} alt="Github logo"/>
+                        <p>built by Malibongwe Matiso</p>
                     </div>
                 </a>
             </div>
