@@ -5,14 +5,16 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const basePromptPrefix = "";
+const basePromptPrefix = 'This is a chat with Athena, a therapist with a fun personality\n' +
+    'Me:'
+const basePromptSuffix = '\nAthena:'
 const generateAction = async (req, res) => {
-    console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
+    console.log(`API: ${basePromptPrefix}${req.body.userInput}${basePromptSuffix}`)
 
     const baseCompletion = await openai.createCompletion({
         model: 'text-davinci-003',
-        prompt: `${basePromptPrefix}${req.body.userInput}`,
-        temperature: 0.7,
+        prompt: `${basePromptPrefix}${req.body.userInput}${basePromptSuffix}`,
+        temperature: 0.8,
         max_tokens: 250,
     });
 
